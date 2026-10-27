@@ -65,8 +65,7 @@ while conexao:
                 print("ERRO: ", e)
             else:
                 print("\nDADOS GRAVADOS!")
-                conn.close()
-
+        
         case "2":
             print("LISTAR PETS")
             lista_dados = []
@@ -136,7 +135,7 @@ while conexao:
                 """
 
                 inst_consulta.execute(consulta)
-                data = inst_cadastro.fetchall()
+                data = inst_consulta.fetchall()
 
                 if not data:
                     print("Registro não encontrado")
@@ -181,6 +180,7 @@ while conexao:
 
                 if len(lista_dados) == 0:
                     print("Pet não cadastrado com este ID")
+        
                 else: # Está cadastrado
                     exclusao = f"DELETE FROM petshop WHERE id = {pet_id}"
                     inst_exclusao.execute(exclusao)
@@ -190,9 +190,7 @@ while conexao:
                 
             except Exception as e:
                 print("Erro: ", e)
-            else:
-                conn.close()
-
+        
         case "5":
             print("!!!!! EXCLUIR TODOS OS REGISTROS DA TABELA !!!!!")
             try:
@@ -209,7 +207,8 @@ while conexao:
 
             except Exception as e:
                 print("Erro: ", e)
-            else:
-                conn.close()
-    
+
+if conexao:
+    conn.close()
+
 input("Pressione algo para continuar.........")
