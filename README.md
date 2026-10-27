@@ -115,10 +115,5 @@ Como este é um projeto de evolução, pretendo melhorá-lo e usá-lo como ponto
 - [ ] Realizar análises e visualizações dos dados com Pandas
 - [ ] Evoluir para projetos de análise de dados
 
----
-
-## 👨‍💻 Autor
-
-Desenvolvido por **Seu Nome** | Estudante na **FIAP**
 
 [LinkedIn](https://www.linkedin.com/in/seu-perfil) • [GitHub](https://github.com/seu-usuario)
